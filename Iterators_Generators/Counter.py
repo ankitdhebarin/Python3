@@ -9,9 +9,8 @@ class Counter():
 
 	def __next__(self):
 		if self.low < self.high:
-			num = self.low
 			self.low += 1
-			return num
+			return self.low
 		raise StopIteration
 
 for num in Counter(0,10):
