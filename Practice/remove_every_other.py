@@ -1,11 +1,10 @@
 def remove_every_other(mylist):
 
-	size = len(mylist)
+	test = []
+	for i,val in enumerate(mylist):
+		if i % 2 == 0:
+			test.append(val)
 
-	for i in range(size):
-		if i % 2 == 1:
-			mylist.pop(i)
+	return test
 
-	print(mylist)
-
-remove_every_other([1,2,3,4,5])
+print(remove_every_other([1,2,3,4,5]))
