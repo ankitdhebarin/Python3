@@ -17,6 +17,6 @@ def reverseint(num):
 
 	return int(temp)
 
-print(reverseint(247))
+print(reverseint(2317))
 
 
