@@ -15,6 +15,9 @@ def two_list_dictionary(l1,l2):
 			else:
 				break
 	
+	print(l1)
+	print(l2)
+
 	for i in range(len(l1)):
 
 		temp[l1[i]] = l2[i]

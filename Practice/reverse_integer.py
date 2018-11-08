@@ -1,6 +1,5 @@
 def reverse_integer(num):
 
-	i = 1
 	temp = ''
 
 	for i in range(len(str(num))):
@@ -11,5 +10,5 @@ def reverse_integer(num):
 
 	return int(temp)
 
-print(type(reverse_integer(123)))
+print((reverse_integer(123)))
 

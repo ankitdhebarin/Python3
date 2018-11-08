@@ -1,15 +1,15 @@
-def valid_parenthesis(s):
+def validparenthesis(arr):
 
-	if len(s) % 2 != 0:
-		return False
-
-	stack = []
+	if len(arr) % 2 != 0:
+		return arr
 
 	opening = set('([{')
 
-	matching = set([('(',')'), ('{','}'), ('[',']')])
+	matching = set([('(',')'),('[',']'),('{','}')])
 
-	for paren in s:
+	stack = []
+
+	for paren in arr:
 
 		if paren in opening:
 
@@ -17,7 +17,7 @@ def valid_parenthesis(s):
 
 		else:
 
-			if len(s) == 0:
+			if len(stack) == 0:
 				return False
 
 			last_item = stack.pop()
@@ -27,7 +27,8 @@ def valid_parenthesis(s):
 
 	return len(stack) == 0
 
-
-print(valid_parenthesis('{[]}'))
-
-
+print(validparenthesis("()"))
+print(validparenthesis("()[]{}"))
+print(validparenthesis("(]"))
+print(validparenthesis("([)]"))
+print(validparenthesis("{[]}"))
