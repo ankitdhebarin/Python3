@@ -41,4 +41,9 @@ Answer:  	cat filename.txt | cut -c 10-20
 12) How to find how many users have logged in and logged out in last five minutes using shell scripts?
 Who | wc -l | last -5
 
+13) How to print files and directories with large no of files
+du -a /var | sort -n -r | head -n 10
+	OR
+for i in /*; do echo $i; find $i | wc -l; done 
+
 			
