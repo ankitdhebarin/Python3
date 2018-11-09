@@ -1,0 +1,44 @@
+linux shell scripting interview questions
+
+1) Write a script to validate a password. The password should be least 8 characters long, should contain both alphabet and number, contain small cap and large cap letters. If any of these conditions are not met, the script should flag the password as "weak password".
+
+2) How would you print just the 25th line in a file (smallest possible script please)?
+ Answer:  sed -n 17p file.txt
+
+3) You have current directory containing set of directories which contain files.One file can reside in many directories.Write script which returns number of unique file names inall the subdirectories of a current dir.
+
+Answer:	  find . -type f | awk -F/ '{print $NF}' file.txt
+
+4) How do you search the string for vowel's occurrence and number of occurrences of each vowel
+
+5) Want to delete the record if I find a word (dd)in the fixed length(5-7).
+Answer: 	sed /dd/d file.txt
+
+6) In UNIX delete previous line if current line contains particular keyword
+Answer: 	prev_line=`grep -B1 "Rahul" marks.txt | head -1` | grep -v "$prev_line" marks.txt
+
+7) Write a small shell script that adds an extension ".new" to all the files in a directory.
+#!/bin/sh
+  
+for f in `ls`
+do
+  mv $f $f.new
+done
+
+
+8) list difference between 2 directories in unix
+Answer: 	diff -r dir1/ dir2/
+
+9) Using Bourne shell : if you enter A B C D E F G.......................n after the command,how will you write a programme to reverse these positional parameters?
+Answer: 	echo $*|rev
+
+10) How will you list only the empty lines in a file (using grep)?
+Answer: 	grep -n ^$ file1.txt
+
+11) How would you get the character positions 10-20 from a text file?
+Answer:  	cat filename.txt | cut -c 10-20
+
+12) How to find how many users have logged in and logged out in last five minutes using shell scripts?
+Who | wc -l | last -5
+
+			
