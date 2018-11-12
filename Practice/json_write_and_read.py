@@ -27,4 +27,13 @@ with open('data.txt','w') as file:
     file.write(newstr)
 
 
+with open('data.txt') as newfd:
+
+    newdata = json.load(newfd)
+
+    for p in data['people']:
+
+        print("Name: " + p['name'])
+        print("website: " + p['website'])
+        print("from: " + p['from'])
 
